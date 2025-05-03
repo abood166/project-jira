@@ -1,0 +1,441 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+:root{
+    --main-bg: rgb(24, 83, 211);
+    --main-color: rgb(254, 254, 254);
+    --color-main-title: #9e9ea9df;
+    --secondery-bg: #f7f7f7e8;
+    --secondry-color: #333;
+    --third-color: #444;
+    --color-ligen: #a0a0a0;
+    --bread-crumb: rgb(108, 117, 125);
+    --login-back: #f2f1f1;
+}
+/* ---------- change style scroll bar to make suitable with this page ---------- */
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background: var(--login-back);
+    box-shadow: 0 0 5px var(--second-bg-color) inset;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--main-bg);
+}
+/* ---------- change style selection to make suitable with this page ---------- */
+::selection{
+    background-color: var(--main-bg);
+    color: var(--main-color);
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+input{
+    outline: none;
+    box-shadow: none !important;
+}
+.container{
+    margin: 40px auto;
+    max-width: 100%;
+}
+#settings{
+    left: 0;
+    width: 4%;
+    background-color: var(--main-bg);
+    align-items: center;
+    padding: 40px 0;
+}
+#settings, #project_settings{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#settings i{
+    color: var(--main-color);
+    font-size: 1.3em;
+    padding-bottom: 25px;
+    cursor: -moz-grab;
+}
+#settings .bottom{
+    position: absolute;
+    bottom: 50px;
+}
+#settings .bottom img, #project_settings .inform_proj img{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+#settings .bottom img{
+    cursor: pointer;
+}
+#settings .bottom button{
+    /* display: none; */
+    cursor: pointer;
+    position: absolute;
+}
+#settings .bottom button i{
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+#settings .bottom img, #settings .bottom i{
+    border-radius: 50%;
+}
+#settings .bottom i.fa-question{
+    color: darkslategray;
+    background-color: var(--main-color);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+#project_settings{
+    left: 4%;
+    width: 15%;
+    background-color: var(--secondery-bg);
+    padding: 40px 10px; 
+}
+#project_settings .logout{
+    position: absolute;
+    bottom: 110px;
+    width: 90%;
+}
+#project_settings #logout{
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+#project_settings #logout.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+#project_settings .inform_proj{
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--color-ligen);
+    justify-content: center;
+}
+#project_settings .inform_proj img{
+    mix-blend-mode: darken;
+}
+#project_settings{
+    .inform_proj, .kanban_board, .proj_setting, a{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+}
+#project_settings h2{
+    font-size: 1.0rem;
+    text-transform: capitalize;
+    color: var(--secondry-color);
+}
+#project_settings .inform_proj p{
+    color: var(--third-color);
+    text-transform: capitalize;
+}
+#project_settings .kanban_board img{
+    width: 30px;
+    height: 20px;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(74%) saturate(726%) hue-rotate(204deg);
+}
+#project_settings .kanban_board{
+    margin-bottom: 5px;
+}
+#project_settings .kanban_board h2{
+    margin-left: -5px;
+    padding-top: 5px;
+    color: var(--main-bg);
+}
+#project_settings  .proj_setting{
+    margin-left: 7px;
+}
+#project_settings .proj_setting i{
+    font-size: 1.2rem;
+    color: var(--secondry-color);
+}
+#head, #hero, #card{
+    margin-left: 21%;
+}
+#head .breadcrumb{
+    margin-bottom: 20px;
+}
+#head .breadcrumb li a{
+    color: var(--bread-crumb);
+    text-decoration: none;
+    text-transform: capitalize;
+} 
+#head .main-title h1{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--color-main-title);
+}
+#hero, #card{
+    margin-top: 10px;
+}
+#hero .profile-container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+#hero .profile-container img:not(:first-of-type){
+    margin-left: -15px;
+}
+#card .card{
+    background-color: var(--secondery-bg);
+    border: none;
+    height: 75vh;
+    padding: 10px 0;
+    margin-right: 20px;
+}
+#card .card h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--color-main-title);
+    margin: 0 15px 10px;
+}
+#card .card h3 span{
+    border: 2px solid var(--color-main-title);
+    padding: 2px 10px;
+    border-radius: 50%;
+    font-size: 1.3rem;
+}
+#card .card .card-task{
+    background-color: var(--main-color);
+    padding: 7px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0 5px;
+    margin-top: 7px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+#card .card .card-task:hover{
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+}
+#card .card .card-task p{
+    text-transform: capitalize;
+    font-size: 13px;
+}
+#card .card .card-task h5{
+    font-size: 19px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+#card .card .card-task img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5px;
+}
+
+/*
+ * logain jira design
+*/ 
+.login-jira{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--login-back);
+}
+.main-title{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    color: var(--color-main-title);
+    font-size: 3.2em;
+}
+.login-jira form{
+    background-color: var(--main-color);
+    padding: 40px 30px;
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.2);
+    width: 350px;
+}
+.login-jira form div{
+    width: 100%;
+    position: relative;
+}
+.login-jira form div i{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: var(--color-main-title);
+}
+.login-jira form input:not([type="checkbox"]){
+    width: 100%;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    color: var(--secondry-color);
+}
+.login-jira form input:not([type="checkbox"]):focus{
+    color: var(--main-bg);
+}
+.login-jira form .remember_password{
+    margin-top: -10px;
+}
+.login-jira form  input[type="checkbox"]{
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.login-jira form input.btn{
+    margin-bottom: 0px;
+    font-size: 1.5em;
+    color: var(--secondery-bg);
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+/*
+*responsive design
+*/
+.kanban-container{
+    display: flex;
+    gap: 3px 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.kanban-container .kanban-column{
+    flex: 1 1 300px; /* Grow/shrink and set a min width */
+    min-width: 300px;
+    max-width: 100%;
+}
+@media (max-width: 1200px) {
+    #settings .bottom img, #project_settings .inform_proj img{
+        width: 30px;
+        height: 30px;
+    }
+    #settings .bottom i{
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+    #project_settings{
+        width: 19%;
+    }
+    #project_settings h2{
+        font-size: .8rem;
+    }
+    #project_settings .inform_proj p{
+        font-size: 15px;
+    }
+    #head, #hero, #card{
+        margin-left: 24%;
+    }
+}
+@media (max-width: 900px) {
+    #project_settings h2{
+        font-size: .7rem;
+    }
+    #project_settings .inform_proj p{
+        font-size: 13px;
+    }
+}
+@media (max-width: 800px) {
+    .kanban-column:not(:last-child){
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    #sidebarToggle{
+        box-shadow: none !important;
+        outline: none;
+        width: 95%;
+        border: none !important;
+        margin-bottom: 30px;
+    }
+    #closeSettings{
+        position: absolute;
+        box-shadow: none !important;
+        outline: none;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+        font-size: 18px;
+        display: none;
+    }
+    #closeSettings.show {
+        display: block;
+    }
+    #project_settings, #settings{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex; /* Required if you removed d-none */
+        flex-direction: column;
+    }
+    #project_settings.show, #settings.show{
+        transform: translateX(0);
+    }
+    #project_settings.show{
+        margin-left: 40px;
+    }
+    #settings{
+        width: 40px;
+    }
+    #project_settings{
+        width: 170px;
+    }
+    #head .breadcrumb{
+        margin-left: -10px;
+    }
+    #head .breadcrumb li a{
+        font-size: .8rem;
+    } 
+    #head .main-title h1{
+        font-size: 1.5rem;
+        margin-left: -10px;
+    }
+    #head.hide-section, #hero.hide-section, #card.hide-section {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease;
+    }
+    #head, #hero, #card {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease;
+        margin-left: 0;
+    }
+
+}
+@media (max-width: 400px){
+    #head, #hero, #card {
+        width: 100%;
+        margin-left: 0;
+    }
+    .login-jira form{
+        padding: 40px 20px;
+        width: 300px;
+    }
+}
