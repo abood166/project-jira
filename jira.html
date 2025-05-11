@@ -22,27 +22,6 @@
 </head>
 <body>
     <div class="container">
-        <header id="head" class="row">
-            <button class="btn btn-primary d-md-none" id="sidebarToggle">
-                <i class="fas fa-bars"></i>
-            </button>            
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="#">Projects</a>
-                    </li>
-                    <li class="breadcrumb-item">
-                        <a href="#">angular jira clone</a>
-                    </li>
-                    <li class="breadcrumb-item active" aria-current="page">
-                        <a href="#">kanban board</a>
-                    </li>
-                </ol>
-            </nav>
-            <div class="main-title">
-                <h1>Kanban board</h1>
-            </div>
-        </header>
         <aside id="settings" class="d-md-flex flex-column">
                    <a href="#">
                         <i class="fa-brands fa-jira" aria-label="icons jira"></i>
@@ -67,16 +46,28 @@
                     <p>software project</p>
                 </div>
             </div>
-            <div class="kanban_board">
-               <a href="jira.html">
+            <div class="kanban_board nav">
+               <a href="jira.html" class="active">
                     <img src="images/layout-three-columns.svg" alt="three columns image">
                     <h2>kanban board</h2>
                </a>
             </div>
-            <div class="proj_setting">
+            <div class="proj_setting nav">
                 <a href="#">
                     <i class="fa-solid fa-gear" aria-label="icons gear"></i> 
                     <h2>project settings</h2>
+                </a>
+            </div>
+            <div class="dashboard nav">
+                <a href="dashboard.html">
+                    <i class="fas fa-gauge"></i>
+                    <h2>dashboard</h2>
+                </a>
+            </div>
+            <div class="ui_ux_designer nav">
+                <a href="ui_ux_desgner.html">
+                    <i class="fas fa-image"></i>
+                    <h2>ui/ux designer</h2>
                 </a>
             </div>
             <div class="logout">
@@ -85,76 +76,253 @@
                 </button>
             </div>
         </aside>
-        <section id="hero">
-            <div class="profile-container">
-                <img src="images/feras.png" alt="image programmer">
-                <img src="images/img_4.jpg" alt="image programmer">
-                <img src="images/feras.png" alt="image programmer">
-                <img src="images/img_4.jpg" alt="image programmer">
-                <img src="images/feras.png" alt="image programmer">
+        <main id="content-page">
+            <section id="time_task">
+                <div class="designated_time">
+                    <h3>Designated time</h3>
+                    <p id="designated_time"></p>
+                </div>
+                <div class="reamining_time">
+                    <h3>Remaining time</h3>
+                    <p id="remaining_time"></p>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress">
+                        <span class="fill" id="fill"></span>
+                    </div>
+                </div>
+            </section>
+            <section id="breadcrumb">
+                <button class="btn btn-primary d-md-none" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>            
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="#">Projects</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="#">angular jira clone</a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">
+                            <a href="#">kanban board</a>
+                        </li>
+                    </ol>
+                </nav>
+                <div class="main-title">
+                    <h1>Kanban board</h1>
+                </div>
+            </section>
+            <section id="hero">
+                <div class="search">
+                    <input type="search" name="search" id="search" placeholder="search here ..." aria-label="search">
+                    <button type="button" class="btn btn-secondary" id="enter_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+                <div class="profile-container">
+                    <img src="images/feras.png" alt="image programmer">
+                    <img src="images/img_4.jpg" alt="image programmer">
+                    <img src="images/feras.png" alt="image programmer">
+                    <img src="images/img_4.jpg" alt="image programmer">
+                    <img src="images/feras.png" alt="image programmer">
+                </div>
+            </section>
+            <section id="card">
+                <div class="cards kanban-container">
+                    <div class="card kanban-column">
+                        <h3>to-do <span class="count-task">3</span></h3>
+                        <div class="card-task"   
+                        data-title="angular spotify" 
+                        data-description="Build a music web app using Angular that connects to the Spotify API. The app should let users log in with their Spotify account, search for music, and see their favorite songs, artists, and playlists. It will also show music details like album covers, track names, and previews" 
+                        data-assignee="Abdullah Badwan"
+                        data-priority="High Priority"
+                        data-status="to-do"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>angular spotify</p>
+                            <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
+                        </div>
+                        <div class="card-task"
+                        data-title="what is angular jira clone aaplication?" 
+                        data-description="A simplified version of JIRA made with Angular. It helps teams track tasks using a Kanban board, with features like task creation, status change, and user assignment. Used for learning Agile and project management in web dev" 
+                        data-assignee="feras al-akkad"
+                        data-priority="Urgent"
+                        data-status="to-do"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>what is angular jira clone aaplication?</p>
+                            <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
+                        </div>
+                        <div class="card-task"
+                        data-title="who is the author of angular jira clone?" 
+                        data-description="The authors of the Angular JIRA clone application are Abdullah Badwan and Feras Al-Akkad. They designed and developed this project to simulate real-world Agile project management using Angular and Bootstrap." 
+                        data-assignee="Abdullah Badwan"
+                        data-priority="pending"
+                        data-status="to-do"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>who is the author of angular jira clone?</p>
+                            <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
+                        </div>
+                    </div>
+                    <div class="card kanban-column">
+                        <h3>qa <span class="count-task">2</span></h3>
+                        <div class="card-task"
+                        data-title="when creating an issue, the assignee list is not working properly on       
+                                searching" 
+                        data-description="When users try to assign a team member while creating a new issue, the search bar in the assignee dropdown doesn't return correct or filtered results. This prevents selecting the right assignee efficiently" 
+                        data-assignee="abdullah badwan"
+                        data-priority="Urgent"
+                        data-status="qa"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>
+                                when creating an issue, the assignee list is not working properly on       
+                                searching
+                            </p>
+                            <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
+                        </div>
+                        <div class="card-task"
+                        data-title="each issue has a single reporter but can have multiple asignees" 
+                        data-description="In the issue tracking system, each issue should be reported by only one user (the reporter), but multiple users can be assigned to work on it (the assignees). This setup ensures accountability while allowing collaboration" 
+                        data-assignee="feras al-akkad"
+                        data-priority="High Priority"
+                        data-status="qa"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>
+                                each issue has a single reporter but can have multiple asignees
+                            </p>
+                            <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
+                        </div>
+                    </div>
+                    <div class="card kanban-column">
+                        <h3>done <span class="count-task">4</span></h3>
+                        <div class="card-task"
+                        data-title="how to build jira clone? follow these tutorials from its author. update 
+                                part 4 - 2 - 2025 &#128514;" 
+                        data-description="This task refers to following a step-by-step tutorial series created by the author of the Angular JIRA clone project. The tutorials guide users in building a clone of JIRA using Angular and related technologies" 
+                        data-assignee="feras al-akkad"
+                        data-priority="pending"
+                        data-status="done"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>
+                                how to build jira clone? follow these tutorials from its author. update 
+                                part 4 - 2 - 2025 &#128514;
+                            </p>
+                            <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
+                        </div>
+                        <div class="card-task"
+                        data-title="preparing backend API with graphQL - update 04/2025" 
+                        data-description="This task involves setting up the backend API using GraphQL to manage data operations such as creating, updating, and retrieving tasks and project details in the Angular JIRA Clone" 
+                        data-assignee="feras al-akkad"
+                        data-priority="pending"
+                        data-status="done"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>preparing backend API with graphQL - update 04/2025</p>
+                            <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
+                        </div>
+                        <div class="card-task"
+                        data-title="jira clone storybook - update 05/2025" 
+                        data-description="This task involves integrating Storybook into the Angular JIRA Clone project to visually build, test, and document UI components in isolation." 
+                        data-assignee="abdullah badwan"
+                        data-priority="Urgent"
+                        data-status="done"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>
+                                jira clone storybook - update 05/2025
+                            </p>
+                            <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
+                        </div>
+                        <div class="card-task"
+                        data-title="try leaving a comment on the issue." 
+                        data-description="This task tests the comment feature in the Angular JIRA clone, ensuring that users can write and submit comments on a specific issue" 
+                        data-assignee="abdullah badwan"
+                        data-priority="Urgent"
+                        data-status="done"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                            <p>
+                                try leaving a comment on the issue.
+                            </p>
+                            <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">
+                        <i class="fa-solid fa-clipboard"></i> <i>Details Task</i>
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="name-task">
+                        <h3>name task</h3>
+                        <p></p>
+                    </div>
+                    <div class="task_description">
+                        <h3>task description</h3>
+                        <p></p>
+                    </div>
+                    <form method="POST" action="" id="update_task">
+                        <div class="row">
+                            <div class="assign_to_him col">
+                                <strong>assign to: </strong>
+                                <small></small>
+                                
+                            </div>
+                            <div class="status col">
+                                <label for="status">status</label>
+                                <select name="status" id="status">
+                                    <option value="" selected disabled>status</option>
+                                    <option value="to-do">📝 TO-DO</option>
+                                    <option value="qa">🔍 QA</option>
+                                    <option value="done">✅  DONE</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="signs col">
+                            <em>Priority</em>
+                            <strong><mark>High Priority</mark></strong>
+                            <hr>
+                        </div>
+                        <div class="comments col">
+                            <label for="comments">comments</label>  
+                            <div class="row" id="comment_input">
+                                <input type="text" name="comments" id="comments" placeholder="add comments here ...">
+                                <button type="button" class="btn btn-primary" id="send-comment">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                </button>
+                            </div>
+                            <button class="comment_btn cl-12 btn btn-primary" id="viewComment_btn">💬 view comments</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </section>
-        <section id="card">
-            <div class="cards kanban-container">
-                <div class="card kanban-column">
-                    <h3>to-do <span class="count-task">3</span></h3>
-                    <div class="card-task">
-                        <p>angular spotify</p>
-                        <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
-                    </div>
-                    <div class="card-task">
-                        <p>what is angular jira clone aaplication?</p>
-                        <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
-                    </div>
-                    <div class="card-task">
-                        <p>who is the author of angular jira clone?</p>
-                        <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
-                    </div>
-                </div>
-                <div class="card kanban-column">
-                    <h3>qa <span class="count-task">2</span></h3>
-                    <div class="card-task">
-                        <p>
-                            when creating an issue, the assignee list is not working properly on       
-                            searching
-                        </p>
-                        <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
-                    </div>
-                    <div class="card-task">
-                        <p>
-                            each issue has a single reporter but can have multiple asignees
-                        </p>
-                        <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
-                    </div>
-                </div>
-                <div class="card kanban-column">
-                    <h3>done <span class="count-task">4</span></h3>
-                    <div class="card-task">
-                        <p>
-                            how to build jira clone? follow these tutorials from its author. update 
-                            part 4 - 2 - 2025 &#128514;
-                        </p>
-                        <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
-                    </div>
-                    <div class="card-task">
-                        <p>preparing backend API with graphQL - update 04/2025</p>
-                        <h5><img src="images/feras.png" alt=""> feras al-akkad</h5>
-                    </div>
-                    <div class="card-task">
-                        <p>
-                            jira clone storybook - update 05/2025
-                        </p>
-                        <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
-                    </div>
-                    <div class="card-task">
-                        <p>
-                            try leaving a comment on the issue.
-                        </p>
-                        <h5><img src="images/img_4.jpg" alt=""> abdullah badwan</h5>
-                    </div>
-                </div>
+        </div>
+        </div>
+        <!-- Comments View Modal -->
+        <div class="modal fade" id="commentsModal" tabindex="-1" aria-labelledby="commentsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="commentsModalLabel">💬 All Comments</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-        </section>
+            <div class="modal-body" id="comments_list">
+                <!-- Comments will appear here -->
+            </div>
+            </div>
+        </div>
+</div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>

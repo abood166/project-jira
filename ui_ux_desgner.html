@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Discover JIRA, the leading project management tool for agile 
+    teams. Track issues, plan sprints, and streamline workflows with powerful collaboration features. 
+    Perfect for software development, DevOps, and business teams.">
+    <meta name="author" content="this website make by abdullah badwan and feras al-akkad">
+    <meta name="keywords" content="jira, jira software, agile project management, issue tracking, bug 
+    tracking, jira tutorials, scrum tools, kanban, DevOps, software development">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="JIRA-Based Agile Project Management System">
+    <meta property="og:description" content="Discover JIRA...">
+    <meta property="og:image" content="">
+    <title>JIRA-Based Agile Project Management System</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/images.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="fonts/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <aside id="settings" class="d-md-flex flex-column">
+                   <a href="#">
+                        <i class="fa-brands fa-jira" aria-label="icons jira"></i>
+                   </a>
+                    <a href="#">
+                        <i class="fa fa-search" aria-label="icons search"></i>
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-plus" aria-label="icons plus"></i>
+                    </a>
+            <div class="bottom">
+                <img src="images/img_4.jpg" alt="img-user" id="img_user">
+                <i class="fa-thin fa-question" title="help" aria-label="icons question"></i>
+            </div>
+        </aside>
+        <aside id="project_settings" class="d-md-flex flex-column">
+            <i class="fas fa-times d-md-none" id="closeSettings"></i>
+            <div class="inform_proj">
+                <img src="images/logo_jira.jpg" alt="">
+                <div class="inform">
+                    <h2>angular jira clone</h2>
+                    <p>software project</p>
+                </div>
+            </div>
+            <div class="kanban_board nav">
+               <a href="jira.html">
+                    <img src="images/layout-three-columns.svg" alt="three columns image">
+                    <h2>kanban board</h2>
+               </a>
+            </div>
+            <div class="proj_setting nav">
+                <a href="#">
+                    <i class="fa-solid fa-gear" aria-label="icons gear"></i> 
+                    <h2>project settings</h2>
+                </a>
+            </div>
+            <div class="dashboard nav">
+                <a href="dashboard.html">
+                    <i class="fas fa-gauge"></i>
+                    <h2>dashboard</h2>
+                </a>
+            </div>
+            <div class="ui_ux_designer nav">
+                <a href="ui_ux_desgner.html" class="active">
+                    <i class="fas fa-image"></i>
+                    <h2>ui/ux designer</h2>
+                </a>
+            </div>
+            <div class="logout">
+                <button type="button" class="btn btn-outline-danger" id="logout">
+                    <i class="fa fa-sign-out-alt"></i> logout
+                </button>
+            </div>
+        </aside>
+        <main>
+            <section id="breadcrumb">
+                <button class="btn btn-primary d-md-none" id="sidebarToggle">
+                    <i class="fas fa-bars"></i>
+                </button>            
+            </section>
+            <section id="time_task">
+                <div class="designated_time">
+                    <h3>Designated time</h3>
+                    <p id="designated_time"></p>
+                </div>
+                <div class="reamining_time">
+                    <h3>Remaining time</h3>
+                    <p id="remaining_time"></p>
+                </div>
+                <div class="progress_bar">
+                    <div class="progress">
+                        <span class="fill" id="fill"></span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
