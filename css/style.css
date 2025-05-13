@@ -617,6 +617,9 @@ main #time_task .progress_bar .progress .fill{
     #card .card .card-task{
         margin-bottom: 20px;
     }
+    #card .card{
+        height: 100%;
+    }
 }
 @media (max-width: 400px){
     main {
