@@ -240,6 +240,8 @@ main #time_task .progress_bar .progress .fill{
 }
 #hero{
     display: flex;
+    flex-wrap: wrap;
+    column-gap: 20px;
     padding: 10px 0;
 }
 #hero .search{
@@ -612,6 +614,9 @@ main #time_task .progress_bar .progress .fill{
     main #time_task h3{
     font-size: 0.8rem;
     }
+    #card .card .card-task{
+        margin-bottom: 20px;
+    }
 }
 @media (max-width: 400px){
     main {
@@ -621,5 +626,8 @@ main #time_task .progress_bar .progress .fill{
     .login-jira form{
         padding: 40px 20px;
         width: 300px;
+    }
+    #hero .search{
+        margin-bottom: 10px;
     }
 }
